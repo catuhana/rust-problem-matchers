@@ -1,58 +1,14 @@
-# rust-problem-matchers
+# Rust Problem Matchers
 
-GitHub Action to setup [Problem Matchers](https://github.com/actions/toolkit/blob/1cc56db0ff126f4d65aeb83798852e02a2c180c3/docs/problem-matchers.md) for Rust.
+GitHub Action to set-up [Problem Matchers](https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md) for Rust.
 
-Setting this action will automatically annotate errors from Rust toolchain on GitHub Actions.
-
-![screenshot](/images/screenshot.png)
+![Demo Screenshot](.github/public/demo.png)
 
 ## Usage
 
-Add this action before running Rust toolchain:
+Add the this action repository to `uses` key of any step:
 
 ```yaml
-- uses: r7kamura/rust-problem-matchers@v1
-```
-
-### Full example
-
-```yaml
-name: test
-
-on:
-  pull_request:
-  push:
-    branches:
-      - main
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          components: rustfmt, clippy
-      - uses: r7kamura/rust-problem-matchers@v1
-      - uses: actions-rs/cargo@v1
-        name: cargo fmt
-        with:
-          command: fmt
-          args: --all -- --check
-      - uses: actions-rs/cargo@v1
-        name: cargo build
-        with:
-          command: build
-      - uses: actions-rs/cargo@v1
-        name: cargo clippy
-        with:
-          command: clippy
-          args: -- -D warnings
-      - uses: actions-rs/cargo@v1
-        name: cargo test
-        with:
-          command: test
+- name: Set-up Rust Problem Matchers
+  uses: catuhana/rust-problem-matchers@v1
 ```

@@ -1,8 +1,0 @@
-name: Rust Problem Matchers
-description: Setup Problem Matchers for Rust.
-runs:
-  using: "node16"
-  main: "index.js"
-branding:
-  color: orange
-  icon: list
