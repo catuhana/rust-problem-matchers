@@ -14,7 +14,7 @@ Add this action to the `uses` field of a new step before executing any `cargo` a
 
 ```yaml
 - name: Set-up Rust Problem Matchers
-  uses: catuhana/rust-problem-matchers@v1
+  uses: catuhana/rust-problem-matchers@v2
 ```
 
 <details>
@@ -36,7 +36,7 @@ Add this action to the `uses` field of a new step before executing any `cargo` a
           uses: actions/checkout@v4
 
         - name: Set up Rust problem matchers
-          uses: catuhana/rust-problem-matchers@v1
+          uses: catuhana/rust-problem-matchers@v2
 
         - name: Set up or update Rust stable toolchain
           run: rustup toolchain install stable --profile default
