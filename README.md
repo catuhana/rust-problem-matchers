@@ -2,11 +2,15 @@
 
 GitHub Action to set-up [Problem Matchers](https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md) for Rust.
 
-![Demo Screenshot](.github/public/demo.png)
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset=".github/assets/demo.png" />
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/demo-dark.png" />
+  <img alt="Demo Screenshot" src=".github/assets/demo.png">
+</picture>
 
 ## Usage
 
-Add the this action repository to `uses` key of any step:
+Create a new step and add this action to the `uses` field:
 
 ```yaml
 - name: Set-up Rust Problem Matchers
