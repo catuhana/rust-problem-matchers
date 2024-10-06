@@ -1,8 +1,8 @@
-name: Rust Problem Matchers
-description: Set-up Problem Matchers for Rust.
+name: Rust Problem Matchers Action
+description: Set up Problem Matchers for Rust.
 branding:
-  color: purple
-  icon: list
+  color: yellow
+  icon: alert-circle
 runs:
   using: composite
   steps:
