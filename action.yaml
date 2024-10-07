@@ -6,6 +6,6 @@ branding:
 runs:
   using: composite
   steps:
-    - name: Set-up Problem Matchers for Rust
+    - name: Set up Problem Matchers for Rust
       shell: bash
       run: echo "::add-matcher::${{ github.action_path }}/.github/rust-matchers.json"

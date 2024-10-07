@@ -1,6 +1,6 @@
 # Rust Problem Matchers
 
-GitHub Action to set-up [Problem Matchers](https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md) for Rust.
+GitHub Action to set up [Problem Matchers](https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md) for Rust.
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset=".github/assets/demo.png" />
@@ -13,7 +13,7 @@ GitHub Action to set-up [Problem Matchers](https://github.com/actions/toolkit/bl
 Add this action to the `uses` field of a new step before executing any `cargo` action.
 
 ```yaml
-- name: Set-up Rust Problem Matchers
+- name: Set up Rust Problem Matchers
   uses: catuhana/rust-problem-matchers@v2
 ```
 
@@ -65,3 +65,7 @@ Add this action to the `uses` field of a new step before executing any `cargo` a
           run: cargo +stable clippy --verbose -- -W clippy::nursery
   ```
 </details>
+
+## What Are the Differences From the Upstream? Why Not Upstreaming This Fork?
+
+I forked the project to bring back the `composite` step that upstream removed to avoid `bash` dependency on Windows runners. I never had issues with it on GitHub-hosted runners, and figured others might prefer this to avoid the `node` deprecation warning.
